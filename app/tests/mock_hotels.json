@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Cosmos Collection Altay Resort",
+    "location": "Republic Altay",
+    "services": ["Wi-fi", "Parking"],
+    "rooms_quantity": 15,
+    "image_id": 1
+  },
+  {
+    "name": "Skala",
+    "location": "Republic Altay",
+    "services": ["Wi-fi", "Parking"],
+    "rooms_quantity": 23,
+    "image_id": 2
+  }
+]
