@@ -1,0 +1,14 @@
+-- in '2023-05-15'
+-- out '2023-06-05'
+
+
+with booked_rooms as (
+select bookings.room_id, count(bookings.room_id) as rooms_booked, rooms.id, rooms.quantity, rooms.hotel_id
+from bookings left join rooms on rooms.id = bookings.room_id
+where bookings.date_from >= '2023-06-15' or bookings.date_to <= '2023-05-05'
+group by room_id, rooms.id, rooms.quantity
+)
+select hotels.id, hotels.name, hotels.location, hotels.rooms_quantity,
+booked_rooms.rooms_booked, booked_rooms.quantity
+from hotels
+left join booked_rooms on hotels.id = booked_rooms.hotel_id
